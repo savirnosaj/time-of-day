@@ -3,10 +3,11 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>HTML5 Flexible Template</title>
-		<meta name="robots" content="noindex,nofollow" />
 		<style>
 			* {padding:0; margin:0;}
-			html {background-color:#ccc;}
+			html {
+				background-color:#ccc;
+			}
 			body {
 				font-family: Arial, Helvetica, sans-serif;
 				max-width:960px; /* keeps from getting too large on wide screen */
@@ -23,8 +24,10 @@
 				max-width:300px; /* actual size of image */
 				width:33%; /* approximate size taken on screen in maximum view */
 			}
-			p {margin:10px;}
-			h1,h2,h3,h4,h5,h6{
+			p {
+				margin:10px;
+			}
+			h1,h2,h3,h4,h5,h6 {
 				font-weight:normal;
 				margin:10px;
 			}
@@ -33,18 +36,18 @@
 				text-align:center;
 				clear:both; /* ride below all items */
 			}
-			nav{
+			nav {
 				text-align:center; /* centers the nav */
 			}
 
 			nav ul {
 				list-style:none; /* removes the bullets */
 			}
-			nav ul li{
+			nav ul li {
 				display:inline-block; /* makes horizontal, but able to declare margins */
 				margin:0 2%; /* margin left-right, gets smaller as necessary */
 			}
-			nav a:hover{
+			nav a:hover {
 				text-decoration: none;
 			}
 		</style>
@@ -56,7 +59,7 @@
 		</header>
 		<h2 id="greeting">Greeting goes here</h2>
 		<main>
-			<header><h3>A JavaScript example by Jason Rivas</h3></header>
+			<h3>A JavaScript example by Jason Rivas</h3>
 			<p>This is a web page that uses JavaScript to determine the current hour, and presents a different image, custom message,
 			and color based on each of the following times of day:!</p>
 
@@ -92,24 +95,23 @@
 
 			if(myHour>= 5 && myHour <12){
 				myText = "Good Morning";
-				myColor = "orange";
+				myColor = "yellow";
 				myPic = "images/morning.jpg";
 			}
 			else if (myHour>= 12 && myHour <18){
 				myText = "Good Afternoon";
-				myColor = "green";
+				myColor = "silver";
 				myPic = "images/afternoon.jpg";
 			}
 			else if (myHour>= 18 && myHour <23){
 				myText = "Good Evening";
-				myColor = "blue";
+				myColor = "gold";
 				myPic = "images/evening.jpg";
 			}else{
 				myText = "Good Night";
-				myColor = "purple";
+				myColor = "tan";
 				myPic = "images/night.jpg";
 			}
-			//console.log(myText);
 			document.getElementById('greeting').innerHTML = myText;
 			document.getElementById('greeting').style.color = myColor;
 			document.querySelector("html").style.backgroundColor = myColor;
